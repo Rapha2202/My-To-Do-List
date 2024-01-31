@@ -12,7 +12,6 @@ const authCheck = async (req, res, next) => {
 
       const { email, userId } = decodedToken;
       const checkUserToken = await tables.user.checkToken(token);
-      console.info(checkUserToken);
 
       if (
         checkUserToken.length === 1 &&

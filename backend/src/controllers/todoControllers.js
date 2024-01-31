@@ -64,8 +64,6 @@ const edit = async (req, res, next) => {
 
     let response = false;
 
-    console.info(todo, details);
-
     if (result.length === 0) {
       res.status(200).send({
         message: "Une erreur est survenu veuillez réessayer plus tard",

@@ -58,8 +58,6 @@ const add = async (req, res, next) => {
     const user = await tables.user.signIn(email);
     const usernameTest = await tables.user.checkUsername(username);
 
-    console.info(user, usernameTest);
-
     if (user.length === 1) {
       res.status(200).send({ message: "Email déjà utilisé" });
     } else if (usernameTest.length === 1) {
@@ -88,7 +86,6 @@ const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
     const user = await tables.user.signIn(email);
-    console.info(user);
     if (user.length === 1) {
       const verified = await argon2.verify(user[0].password, password);
 
@@ -144,7 +141,6 @@ const checktoken = async (req, res, next) => {
 
     const { userId } = decodedToken;
     const checkUserToken = await tables.user.checkToken(token);
-    console.info(checkUserToken);
     if (
       checkUserToken.length === 1 &&
       checkUserToken[0].token === token &&

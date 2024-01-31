@@ -51,7 +51,6 @@ class UserManager extends AbstractManager {
        WHERE token = ?`,
       [username, lastUpdate, token]
     );
-    console.info(result);
     return result;
   }
 

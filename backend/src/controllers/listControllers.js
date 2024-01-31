@@ -168,7 +168,6 @@ const listUsers = async (req, res, next) => {
       });
     });
     Promise.all(UserMap).then(() => {
-      console.info(user);
       res.status(200).send(user);
     });
   } catch (err) {
