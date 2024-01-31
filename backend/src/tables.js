@@ -2,11 +2,18 @@
 // Register Data Managers for Tables
 /* ************************************************************************* */
 
-// Import the manager modules responsible for handling data operations on the tables
-const ItemManager = require("./models/ItemManager");
+const UserManager = require("./models/userManager");
+const ListManager = require("./models/listManager");
+const ToDoManager = require("./models/todoManager");
+const StateManager = require("./models/stateManager");
+const PriorityManager = require("./models/priorityManager");
 
 const managers = [
-  ItemManager,
+  UserManager,
+  ListManager,
+  ToDoManager,
+  StateManager,
+  PriorityManager,
   // Add other managers here
 ];
 
