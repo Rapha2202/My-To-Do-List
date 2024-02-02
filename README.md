@@ -34,3 +34,8 @@ Si vous souhaitez contribuer à ce projet, veuillez créer une nouvelle branche 
 
 ## Licence
 Ce projet est sous licence MIT.
+
+## Modélisation de la BDD
+
+![alt text](https://github.com/Rapha2202/My-To-Do-List/blob/dev/Capture%20d'%C3%A9cran%202024-02-02%20140154.png)
+
