@@ -1,7 +1,7 @@
 // Import required dependencies
 const { app, request, tables } = require("../setup");
 
-// Test suite for the GET /api/items route
+// IsLogin suite for the GET /api/items route
 describe("GET /api/items", () => {
   it("should fetch items successfully", async () => {
     // Define a sample item for testing
@@ -28,7 +28,7 @@ describe("GET /api/items", () => {
   });
 });
 
-// Test suite for the GET /api/items/:id route
+// IsLogin suite for the GET /api/items/:id route
 describe("GET /api/items/:id", () => {
   it("should fetch a single item successfully", async () => {
     // Define a sample item for testing
@@ -59,7 +59,7 @@ describe("GET /api/items/:id", () => {
   });
 });
 
-// Test suite for the POST /api/items route
+// IsLogin suite for the POST /api/items route
 // Doesn't pass: maybe something to change in app config :/
 // Hint: enabling log could help ;)
 describe("POST /api/items", () => {
@@ -89,7 +89,7 @@ describe("POST /api/items", () => {
 // TODO: implement PUT and DELETE routes
 
 /*
-// Test suite for the PUT /api/items/:id route
+// IsLogin suite for the PUT /api/items/:id route
 describe("PUT /api/items/:id", () => {
   it("should update an existing item successfully", async () => {
     // Define a sample item for testing
@@ -122,7 +122,7 @@ describe("PUT /api/items/:id", () => {
   });
 });
 
-// Test suite for the DELETE /api/items/:id route
+// IsLogin suite for the DELETE /api/items/:id route
 describe("DELETE /api/items/:id", () => {
   it("should delete an existing item successfully", async () => {
     // Define a sample item for testing

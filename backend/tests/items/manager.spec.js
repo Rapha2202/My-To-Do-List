@@ -1,7 +1,7 @@
 // Import required dependencies
 const { database, tables } = require("../setup");
 
-// Test suite for the create method of ItemManager
+// IsLogin suite for the create method of ItemManager
 describe("Create item", () => {
   it("should create an item successfully", async () => {
     // Define a sample item for testing

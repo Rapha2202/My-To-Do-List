@@ -36,7 +36,28 @@ const seed = async () => {
     // Wait for all the insertion queries to complete
     await Promise.all(queries);
 
-    // Close the database connection
+  const queriesUser = [];
+
+    // Insert fake data into the 'user' table
+    for (let i = 0; i < 5; i += 1) {
+      queriesUser.push(
+        database.query("insert into user(username, email, password, isAdmin, lastUpdate, creationDate, lastLogin) values (?, ?, ?, ?, ?, ?, ?)", [
+            faker.lorem.words({ min: 1, max: 3}),
+            faker.lorem.words({ min: 1, max: 3}),
+            faker.lorem.words({ min: 1, max: 3}),
+            faker.datatype.boolean() ? 0 : 1,
+            faker.date.anytime().toISOString().split('T').shift(),
+            faker.date.anytime().toISOString().split('T').shift(),
+            faker.date.anytime().toISOString().split('T').shift()
+          ]
+        )
+      );
+    }
+
+    // Wait for all the insertion queries to complete
+    await Promise.all(queriesUser);
+
+  // Close the database connection
     database.end();
 
     console.info(`${database.databaseName} filled from ${__filename} 🌱`);

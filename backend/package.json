@@ -5,12 +5,21 @@
     "db:seed": "node seed.js",
     "build": "node migrate.js",
     "start": "node index.js",
-    "test": "jest"
+    "test": "jest",
+    "crud:maker": "node ./node_modules/wild-js-crud/index.js"
   },
   "dependencies": {
+    "@node-rs/argon2": "^1.7.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "mysql2": "^3.5.2"
+    "joi": "^17.11.1",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.5.2",
+    "nodemailer": "^6.9.9",
+    "uniqid": "^5.4.0",
+    "wild-js-crud": "^1.2.2"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
